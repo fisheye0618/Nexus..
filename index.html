@@ -158,20 +158,20 @@
       name.includes('carton') ||
       name.includes('cardboard') ||
       name.includes('newspaper')
-    ) return '종이';
+    ) return '종이, 음식물이 묻었다면 일반쓰레기에 버리세요';
 
     if (
       name.includes('can') ||
       name.includes('tin') ||
       name.includes('metal') ||
       name.includes('aluminum')
-    ) return '캔';
+    ) return '캔, 내용물을 모두 버리고 찌그러트려서 버리세요';
 
     if (
       name.includes('glass') ||
       name.includes('bottle') ||
       name.includes('jar')
-    ) return '유리';
+    ) return '유리, 내용물을 비우고 라벨을 제거한 후 유리 분리수거함에에 버리세요';
 
     if (
       name.includes('plastic') ||
@@ -179,7 +179,7 @@
       name.includes('bag') ||
       name.includes('bucket') ||
       name.includes('jug')
-    ) return '플라스틱';
+    ) return '플라스틱, 라벨을 제거하고 내용물을 비운 후 압축시켜 버리세요';
 
     if (
       name.includes('film') ||
@@ -188,9 +188,9 @@
       name.includes('polymer') ||
       name.includes('cling wrap') ||
       name.includes('bubble wrap')
-    ) return '비닐';
+    ) return '비닐, 내용물을 버려 깨끗하게 한 후 버리세요';
 
-    return '플라스틱';
+    return '인식 오류';
   }
 
   function addDetectionResults(detections) {
